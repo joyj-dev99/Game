@@ -1,5 +1,6 @@
 import MainScene from "./MainScene.js";
 
+
 const config = {
     width: 320,
     height: 240,
@@ -13,14 +14,14 @@ const config = {
     physics: {
         default: 'matter',
         matter: {
-            debug: true,
+            debug: false,
             gravity: {y: 0},
         }
     },
     plugins: {
         scene: [
             {
-                plugin: PhaserMatterCollisionPlugin,
+                plugin: PhaserMatterCollisionPlugin.default,
                 key: 'matterCollision',
                 mapping: 'matterCollision'
             }
