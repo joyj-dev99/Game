@@ -82,6 +82,8 @@ export default class MainScene extends Phaser.Scene {
  
          // 프로그래스 바
          this.progressBar = this.add.graphics();
+         this.progressBar.fillStyle(0xffffff, 1);
+         this.progressBar.fillRect(6, 6, 98 * (this.progress / 100), 8);
 
          // 진행률 텍스트
         this.progressText = this.add.text(108, 6, this.progress + '%', { fontSize: '10px', fill: '#000000' });
